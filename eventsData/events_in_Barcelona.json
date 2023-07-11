@@ -1,19 +1,14 @@
 {
   "events_categories": [{
-    "id": {
-      "Country": ""
+    "_id": {
+      "Country": "Spain"
     },
-    "City_id": {},
-    "title": {},
-    "description": {},
-    "Image": {}
+    "City_id": "",
+    "title": "",
+    "description": "",
+    "image": ""
   }],
   "all_events": [{
-    "id0": [{}],
-    "id1": [{}],
-    "id2": [{}],
-    "id3": [{}],
-    "id4": [{}],
-    "id5": [{}]
+
   }]
 }
