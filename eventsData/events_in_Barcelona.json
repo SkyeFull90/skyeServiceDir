@@ -1,14 +1,4 @@
 {
-  "events_categories": [{
-    "_id": {
-      "Country": "Spain"
-    },
-    "City_id": "",
-    "title": "",
-    "description": "",
-    "image": ""
-  }],
-  "all_events": [{
-
-  }]
+ "_id": "11042022",
+ "title":"Concert Christian Löffler + Detect Ensemble"
 }
