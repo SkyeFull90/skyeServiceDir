@@ -1,10 +1,10 @@
-package com.example.moviegold;
+package dev.taiko90.movies;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MovieGoldApplicationTests {
+class MoviesApplicationTests {
 
 	@Test
 	void contextLoads() {
