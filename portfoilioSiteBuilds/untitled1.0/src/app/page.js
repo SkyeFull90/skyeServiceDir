@@ -31,6 +31,8 @@ export default function Home() {
               </button>
           </section>
           <section className={'rock-climbing'} id={'climbing'}>
+              <h1>My Tick List can be viewed: <a href="https://www.mountainproject.com/user/112227120/skyler-fullmer/ticks" id="climber">Here</a></h1>
+              <h3>And below are a few routes I have really enjoyed.</h3>
 
           </section>
       </main>
