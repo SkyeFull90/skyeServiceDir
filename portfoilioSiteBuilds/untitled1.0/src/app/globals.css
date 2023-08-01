@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  @apply text-blue-950;
+  width: auto;
+  height: 740px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+a, a:link{
+  text-decoration: none;
+  color: darkcyan;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: darkcyan;
+}
+a.climber, a.climber:link{
+  text-decoration: none;
+  color: #a85442;
+}
+a.climber:hover{
+  text-decoration: underline;
+  color: #999;
+}
+a.developer, a.developer:link{
+  text-decoration: none;
+  color: rgb(228,54,129);
+}
+
+a.developer:hover{
+  text-decoration: underline;
+  color: #1c1b4d;
+}
+header section{
+  padding-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+main > section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+main > section.rock-climbing{
+  height: 600px;
+  background-color: #a85442;
+  padding: 30px;
+}
+section.tick-list > section+section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.portfolio-web{
+  @apply text-white;
+  height: 300px;
+}
+
+.portfolio-video {
+  height: 300px;
+  background: rgb(228,54,129);
+  background: linear-gradient(308deg, rgba(228,54,129,0.5088235977984944) 0%, rgba(193,48,111,0.48921575466123945) 26%, rgba(108,25,61,0.4920168751094187) 52%, rgba(82,105,221,0.5620448863139005) 78%, rgba(81,123,157,0.5340336818321079) 100%);
+}
