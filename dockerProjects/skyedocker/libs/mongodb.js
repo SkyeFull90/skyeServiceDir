@@ -13,7 +13,7 @@ if (!process.env.NEXT_ATLAS_URI) {
     throw new Error('Please add your Mongo URI to .env.local')
 }
 
-export async function connectToDatabase() {
+export async function ConnectToDatabase() {
     try {
         if (mongoClient && database) {
             return { mongoClient, database };
