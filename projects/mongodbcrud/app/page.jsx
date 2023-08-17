@@ -1,5 +1,5 @@
 import React from 'react'
-import EventsList from './compoents/EventsList'
+import EventsList from '@/app/compoents/EventsList'
 
 export default function Home() {
   return (

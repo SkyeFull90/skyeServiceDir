@@ -27,14 +27,14 @@ export default function Navbar() {
           <li><a className={'text-indigo-800 dark:text-white'} href='/'>Home</a></li>
           <li tabIndex={0}>
             <details className={'text-indigo-800 dark:text-white'}>
-              <summary>Topic</summary>
+              <summary>All Anime Conventions</summary>
               <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a>Conventions by Category</a></li>
+                <li><a>All Anime Conventions</a></li>
               </ul>
             </details>
           </li>
-          <li><a className={'text-indigo-800 dark:text-white'} href='#'>Add Topic</a></li>
+          <li><a className={'text-indigo-800 dark:text-white'} href='/add-convention-event'>Add Convention Event</a></li>
         </ul>
       </div>
     </div>

@@ -13,9 +13,12 @@ export default function EventsList() {
             </section>
             <section className='card-actions justify-end gap-2'>
                 <RmvBtn/>
-                <Link href={'#'} className='btn btn-outline btn-info'>
-                    <HiPencilAlt size={24}/>
-                </Link>
+                <button className='btn btn-outline btn-info'>
+                     <Link href={'/edit-convention/123'} >
+                        <HiPencilAlt size={24}/>
+                     </Link>
+                </button>
+               
             </section>
         </main>
     </>
