@@ -23,7 +23,7 @@ export default async function EventsList() {
   const { topics } = await getTopics();
 
   return (
-    <>
+    <div className='grid   gap-4'>
       {topics.map(ev => (
          <main className='card  w-full bg-base-100 border-2 border-slate-800 shadow-xl dark:bg-emerald-800 dark:shadow-cyan-500/70 p-4'>
             <section>
@@ -31,7 +31,7 @@ export default async function EventsList() {
                 <p>{ev.description}</p>
             </section>
             <section className='card-actions justify-end gap-2'>
-                <RmvBtn/>
+                <RmvBtn id={ev._id}/>
                 <button className='btn btn-outline btn-info'>
                      <Link href={`/edit-convention/${ev._id}`} >
                         <HiPencilAlt size={24}/>
@@ -40,6 +40,6 @@ export default async function EventsList() {
             </section>
         </main>
       ))}       
-    </>
+    </div>
   )
 }
