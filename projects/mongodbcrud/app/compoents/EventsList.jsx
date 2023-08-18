@@ -1,26 +1,22 @@
 import React from 'react'
 import RmvBtn from './RmvBtn'
 import Link from 'next/link'
-import { HiPencilAlt }   from "react-icons/hi"
+import {HiPencilAlt} from "react-icons/hi"
+import connectMongodb from "@/libs/mongodb";
+import Topic from "@/models/topic";
 
 const getTopics = async()=>{
   try {
-  const res = await fetch('http://localhost:3000/api/topics', {
-      cache: 'no-store'
-    })
-
-    if(!res.ok){
-      throw new error("Failed to fetch events");
-    }
-
-    return res.json();
+    await connectMongodb();
+    return await Topic.find();
   } catch (error) {
     console.log("Error loading events", error)
   }
 }
 
 export default async function EventsList() {
-  const { topic } = getTopics();
+  const  topic = await getTopics();
+
 
   return (
     <div className='grid  gap-4'>
@@ -39,7 +35,8 @@ export default async function EventsList() {
                 </button>            
             </section>
         </main>
-      ))}       
+      ))}
     </div>
   )
 }
+
