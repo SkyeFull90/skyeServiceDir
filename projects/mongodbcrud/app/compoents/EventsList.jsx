@@ -15,16 +15,16 @@ const getTopics = async()=>{
 
     return res.json();
   } catch (error) {
-    console.log("Error laoding events", error)
+    console.log("Error loading events", error)
   }
 }
 
 export default async function EventsList() {
-  const { topics } = await getTopics();
+  const { topic } = getTopics();
 
   return (
-    <div className='grid   gap-4'>
-      {topics.map(ev => (
+    <div className='grid  gap-4'>
+      {topic.map(ev => (
          <main className='card  w-full bg-base-100 border-2 border-slate-800 shadow-xl dark:bg-emerald-800 dark:shadow-cyan-500/70 p-4'>
             <section>
                 <h2 className='card-title font-bold text-2xl text-primary dark:text-white'>{ev.title}</h2>
