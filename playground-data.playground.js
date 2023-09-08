@@ -33,23 +33,21 @@ db.getCollection("allEvents").insertMany([
   {
     "id":"london-comic-con-winter",
     "title":"London Comic Con Winter",
-    "city":"London",
-    "description":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+    "city":"london",
+    "description":"London Comic Con Winter is coming to Olympia over the weekend of 11-12 November 2023. We will be bringing you the Stars of Film & TV for you to meet, get their autographs & have your photo taken with them! All this will be taking place at the historic Olympia London.",
     "image":"https://images.unsplash.com/photo-1608889476561-6242cfdbf622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-    "emails_registered":[]
   },
   {
     "id":"hyde-park-winter-wonderland",
     "title":"Hyde Park Winter Wonderland",
-    "city":"London",
-    "description":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+    "city":"london",
+    "description":"Located in London’s iconic Hyde Park, Winter Wonderland is the world’s ultimate destination for festive fun. Running for six magical weeks from 17th November 2023 to 1st January 2024, Hyde Park Winter Wonderland offers a variety of attractions, activities, entertainment, food, drinks, and so much more.",
     "image":"https://hydeparkwinterwonderland.com/static/252d7fe6693a6a8b1887bd2049204103/039f7/2021-503x503-3.webp",
-    "emails_registered":[]
   },
   {
     "id":"new-years-eve-in-london-2023",
     "title":"New Years Eve in London 2023 ",
-    "city":"London",
+    "city":"london",
     "description":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
     "image":"https://images.unsplash.com/photo-1521478413868-1bbd982fa4a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","emails_registered":[]},
   {
