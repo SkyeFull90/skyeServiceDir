@@ -1,24 +1,6 @@
-use("world_events");
+use('events');
 
 db.getCollection("events_categories").insertMany([
-  {
-    "id":"london",
-    "title":"Events in London",
-    "description":"London oh London, home of Doctor Who, The Beetles famous crossing of Abby Road, the OG Top Gear. Click the photo for events",
-    "image":"https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-  },
-  {
-    "id":"san-francisco",
-    "title":"Events in San Francisco",
-    "description":"Beautiful San Francisco, home to the painted ladies, Alcatraz, MythBusters, and silicon valley. Click the photo for events",
-    "image":"https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-  },
-  {
-    "id":"barcelona",
-    "title":"Events in Barcelona",
-    "description":"Braca or Barcelona, is a beautiful coastal metro city on the northeastern coast of spain. Home to futbul club Barcelona of La Liga, beautiful beaches ceviche and amazing nightlife. Click the photo for events in barcelona",
-    "image":"https://images.unsplash.com/photo-1579282240050-352db0a14c21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80"
-  },
   {
     "id": "anime-conventions",
     "title": "Anime Conventions In The US and  the world",
@@ -28,7 +10,6 @@ db.getCollection("events_categories").insertMany([
 ])
 
 
- 
 db.getCollection("allEvents").insertMany([
   {
     "id":"london-comic-con-winter",
@@ -42,13 +23,13 @@ db.getCollection("allEvents").insertMany([
     "title":"Hyde Park Winter Wonderland",
     "city":"london",
     "description":"Located in London’s iconic Hyde Park, Winter Wonderland is the world’s ultimate destination for festive fun. Running for six magical weeks from 17th November 2023 to 1st January 2024, Hyde Park Winter Wonderland offers a variety of attractions, activities, entertainment, food, drinks, and so much more.",
-    "image":"https://hydeparkwinterwonderland.com/static/252d7fe6693a6a8b1887bd2049204103/039f7/2021-503x503-3.webp",
+    "image":"https://images.unsplash.com/photo-1582853255243-8a0e6631dbd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1635&q=80 ",
   },
   {
     "id":"new-years-eve-in-london-2023",
     "title":"New Years Eve in London 2023 ",
     "city":"london",
-    "description":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+    "description":"Celebrate the new year with the London New Year's Eve fireworks, parties, cruises and more on New Year’s Eve in London.",
     "image":"https://images.unsplash.com/photo-1521478413868-1bbd982fa4a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","emails_registered":[]},
   {
     "id":"'edtech-world-summit-2023",
@@ -82,7 +63,7 @@ db.getCollection("allEvents").insertMany([
   {
     "id":"innovation-summit-san-francisco",
     "title":"Innovation Summit San Francisco",
-    "city":"san-francisco","description":"This conference offers a brounder and deeper take onthe issues and concerns driving the medical device industry today.",
+    "city":"san-francisco","description":"This conference offers a broader and deeper take on the issues and concerns driving the medical device industry today.",
     "image":"https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     "emails_registered":[]
   },
@@ -187,7 +168,7 @@ db.getCollection("allEvents").insertMany([
         "eventCategory": "world-conventions",
         "title": "Anime Japan",
         "city": "Tokyo",
-        "description": "2023.1.30[Mon]AnimeJapan 2023, one of the world's largest anime events is coming back for another in person edition! 2023.1.30[Mon]Tickets Now on sale!!",
+        "description": "AnimeJapan 2023, one of the world's largest anime events is coming back for another in person edition! 2023.1.30[Mon]Tickets Now on sale!!",
         "image": "https://images.unsplash.com/photo-1559981421-3e0c0d712e3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFuaW1lJTIwY29udmVudGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
    }
 ])
