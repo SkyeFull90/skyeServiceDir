@@ -1,0 +1,23 @@
+.breadcrumb{
+    padding: 10px;
+    margin: auto;
+}
+.breadcrumb > li{
+    display: inline;
+}
+.breadcrumb li.location +li.location::before {
+    content: "/"
+}
+.breadcrumb li.loction a:hover{
+    text-decoration: underline;
+    color: #01447e;
+}
+.breadcrumb li.attribute a {
+    color: green;
+}
+.breadcrumb li.attribute::after {
+    content: "x";
+    color: red;
+    font-size: 10px;
+    vertical-align: super;
+}
