@@ -1,10 +1,10 @@
-import unittest
+import pytest
+from unittest.mock import patch
+import main
 
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_main():
+    with patch('builtins.input', return_value='Test'):
+        with patch('builtins.print') as print_mock:
+            main.main()
+            print_mock.assert_any_call('Hello welcome to NetworkChuck Coffee!!!!!!')
+            print_mock.assert_any_call('Hello Test, thank you so much for coming in today')
