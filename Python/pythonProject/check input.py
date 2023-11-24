@@ -2,6 +2,7 @@ import pytest
 from unittest.mock import patch
 import main
 
+
 def test_main():
     with patch('builtins.input', return_value='Test'):
         with patch('builtins.print') as print_mock:
