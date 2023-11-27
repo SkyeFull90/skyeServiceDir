@@ -5,5 +5,6 @@ def coffee_shop():
 
     print("Hello " + name + ", thank you so much for coming in today")
 
+
 # Call the function
 coffee_shop()
