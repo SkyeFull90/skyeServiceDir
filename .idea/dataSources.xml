@@ -8,13 +8,6 @@
       <jdbc-url>mongodb+srv://cluster0.sxhiazc.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="postgres@db.tqlmjfnpqjunrofgyfzy.supabase.co" uuid="189ab706-e701-45eb-98a1-ab83e62337d2">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://db.tqlmjfnpqjunrofgyfzy.supabase.co:5432/postgres</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="@cluster0.qwk58wc.mongodb.net" uuid="e369f1b6-1a1d-403a-a8b6-75324390f052">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
@@ -22,11 +15,11 @@
       <jdbc-url>mongodb+srv://cluster0.qwk58wc.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="database.py" uuid="d730b56e-e12f-41e5-98fb-5831a97b1047">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="postgres@db.vqburumchbojzhtionyw.supabase.co" uuid="d821b7b5-20c6-402d-bea7-b354657745eb">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/dockerProjects/fastAPIDocker/backend/database.py</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://db.vqburumchbojzhtionyw.supabase.co:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
