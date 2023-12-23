@@ -1,0 +1,1 @@
+SELECT genres FROM "movie-api-db".movies
