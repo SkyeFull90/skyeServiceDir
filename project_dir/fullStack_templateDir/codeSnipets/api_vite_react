@@ -1,0 +1,12 @@
+import axios from "axios";
+
+export interface Country {
+  id: number;
+  name: string;
+}
+
+export async function getCountries(): Promise<Country[]> {
+  const response = await axios.get<Country[]>("/countries");
+  return response.data;
+}
+

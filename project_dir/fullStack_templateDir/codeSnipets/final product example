@@ -1,0 +1,25 @@
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+
+# Mount the Vite build directory as a static file directory
+app.mount("/", StaticFiles(directory="my-app/dist", html=True))
+
+# Define API routes
+@app.get("/api/countries")
+async def get_countries():
+    try:
+        # Fetch data from Supabase
+        response = await supabase.from_("countries").select("*").execute()
+        data = response.get("data")
+        return {"data": data}
+    except Exception as e:
+        return {"error": str(e)}
+
+# Serve the index.html file for all other routes
+@app.get("/{path:path}", response_class=HTMLResponse)
+async def serve_frontend(path: str):
+    return app.mount("/", StaticFiles(directory="my-app/dist", html=True)).__call__(None)
+

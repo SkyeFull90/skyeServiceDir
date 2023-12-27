@@ -1,0 +1,30 @@
+import { useEffect, useState } from "react";
+import { Country, getCountries } from "./api";
+
+function App() {
+  const [countries, setCountries] = useState<Country[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getCountries();
+      setCountries(data);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Countries</h1>
+      <ul>
+        {countries.map((country) => (
+          <li key={country.id}>
+            {country.name} - {country.capital} - {country.population}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+

@@ -1,0 +1,29 @@
+<!-- sales_report_template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sales Report</title>
+</head>
+<body>
+    <h1>Sales Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model Type</th>
+                <th>Report</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{ report.id }}</td>
+                    <td>{{ report.model_type }}</td>
+                    <td>{{ report.report }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,2 @@
+# fullStack_templateDir
+ 

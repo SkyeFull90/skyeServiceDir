@@ -1,0 +1,36 @@
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+from supabase import create_client
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+app = FastAPI()
+
+# Enable CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Initialize Supabase client
+supabase_url = os.getenv("SUPABASE_URL")
+supabase_key = os.getenv("SUPABASE_KEY")
+supabase = create_client(supabase_url, supabase_key)
+
+# Define API routes
+@app.get("/countries")
+async def get_countries():
+    try:
+        # Fetch data from Supabase
+        response = await supabase.from_("countries").select("*").execute()
+        data = response.get("data")
+        return JSONResponse(content={"data": data})
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=500)
+
