@@ -1,0 +1,1 @@
+SELECT * FROM CatBook_sample.cats

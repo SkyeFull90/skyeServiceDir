@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Gallery</title>
+    <!--TODO ADD Stylesheet-->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/upload">Upload</a></li>
+        </ul>
+    </nav>
+    <% cats.forEach(cat => { %>
+        <div>
+            <div>
+                <img src="/images/<%= cat.image%>" alt="Adorable Cat"/>
+                <div>
+                    <h5><%= cat.name %> </h5>
+                    <p>
+                        Age: <%= cat.Age %> <br>
+                        Favorite Food: <%= cat.FavoriteFood %> <br>
+                        Fun fact: <%= cat.funFact %>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a href="/edit/<%= cat._id%>">Edit</a>
+                <form action="/delete/<% cat._id%>" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+   <% })%>
+</body>
+</html>
