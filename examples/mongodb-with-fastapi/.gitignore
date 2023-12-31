@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+.envrc
+.venv
+.idea
+.env
+node_modules
