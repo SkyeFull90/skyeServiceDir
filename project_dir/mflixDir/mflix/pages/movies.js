@@ -8,7 +8,7 @@ export default function Movies({ movies }) {
             </p>
             <ul>
                 {movies.map((movie) => (
-                    <li>
+                    <li key={movie.id}>
                         <figure> <img src={movie.poster} alt="poster" width= "200" height="200" /></figure>                       
                             <h2>{movie.title}</h2>
                             <h3>{movie.metacritic}</h3>
