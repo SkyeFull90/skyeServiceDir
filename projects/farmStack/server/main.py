@@ -21,3 +21,7 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@app.get("/api")
+async def api():
+    return {"message": "Welcome to the Todo API"}
