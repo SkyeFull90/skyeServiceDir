@@ -5,3 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # app object
 app = FastAPI()
 
+# CORS
+origins = [
+    "http://localhost:5173",
+]
