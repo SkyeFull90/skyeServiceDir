@@ -25,3 +25,23 @@ async def root():
 @app.get("/api")
 async def api():
     return {"message": "Welcome to the Todo API"}
+
+@app.get("/api/todo")
+async def todo():
+    return {"message": "Todo"}
+
+@app.get("/api/todo/{id}")
+async def todo_id(id: int):
+    return {"message": f"Todo {id}"}
+
+@app.post("/api/todo")
+async def todo_post():
+    return {"message": "Todo POST"}
+
+@app.put("/api/todo/{id}")
+async def todo_put(id: int):
+    return {"message": f"Todo PUT {id}"}
+
+@app.delete("/api/todo/{id}")
+async def todo_delete(id: int):
+    return {"message": f"Todo DELETE {id}"}
