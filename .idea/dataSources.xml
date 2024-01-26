@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@cluster0.sxhiazc.mongodb.net" uuid="77d67c95-2f45-4359-b312-8b45b4005516">
+    <data-source source="LOCAL" name="@localhost" uuid="a6535d51-3479-4258-a143-a188d3747b7a">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb+srv://cluster0.sxhiazc.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
+      <jdbc-url>mongodb://localhost:27017</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="@cluster0.qwk58wc.mongodb.net" uuid="e369f1b6-1a1d-403a-a8b6-75324390f052">
-      <driver-ref>mongo</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb+srv://cluster0.qwk58wc.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="postgres@db.vqburumchbojzhtionyw.supabase.co" uuid="d821b7b5-20c6-402d-bea7-b354657745eb">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://db.vqburumchbojzhtionyw.supabase.co:5432/postgres</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="@cluster0.lxif8ia.mongodb.net" uuid="75c1e419-0cfa-4b3b-aa3d-9b2515ca4900">
+    <data-source source="LOCAL" name="tests" uuid="57915c39-0efd-464a-ac5e-715e3efec02c">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
       <jdbc-url>mongodb+srv://cluster0.lxif8ia.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="@cluster0.vjhod5z.mongodb.net" uuid="96d55b7f-9535-4eaf-9114-201446f8369c">
-      <driver-ref>mongo</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb+srv://cluster0.vjhod5z.mongodb.net/?retryWrites=true&amp;w=majority</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
