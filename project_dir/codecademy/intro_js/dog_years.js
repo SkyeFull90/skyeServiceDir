@@ -4,3 +4,5 @@ let myAge = 1;
 let earlyYears = 2;
 // Multiply the value of earlyYears by 10.5, as each of the first two years of a dog's life counts as 10.5 dog years
 earlyYears *= 10.5;
+// Subtract 2 from myAge to account for the first two years, which are already counted in earlyYears, and assign the result to laterYears
+let laterYears = myAge - 2;
