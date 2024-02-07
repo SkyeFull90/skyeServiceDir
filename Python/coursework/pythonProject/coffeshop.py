@@ -3,7 +3,10 @@ def coffee_shop():
 
     name = input("What is your name? ")
 
-    print("Hello " + name + ", thank you so much for coming in today")
+    if name == "Ben":
+        print('GET OUT OF HERE EVIL BEN!!!!')
+    else:
+        print("Hello " + name + ", thank you so much for coming in today")
 
 
 # Call the function
