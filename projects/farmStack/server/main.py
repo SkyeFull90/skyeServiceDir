@@ -1,7 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-#from fastapi.staticfiles import StaticFiles
 
+# from fastapi.staticfiles import StaticFiles
+from database import (
+    fetch_one_todo,
+    fetch_all_todos,
+    create_todo,
+    update_todo,
+    delete_todo,
+)
 # app object
 app = FastAPI()
 
@@ -18,30 +25,37 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
 
 @app.get("/api")
 async def api():
     return {"message": "Welcome to the Todo API"}
 
+
 @app.get("/api/todo")
 async def todo():
     return {"message": "Todo"}
 
-@app.get("/api/todo/{id}")
-async def todo_id(id: int):
-    return {"message": f"Todo {id}"}
+
+@app.get("/api/todo/{title}")
+async def todo_title(title):
+    return {"message": f"Todo {title}"}
+
 
 @app.post("/api/todo")
 async def todo_post():
     return {"message": "Todo POST"}
 
-@app.put("/api/todo/{id}")
-async def todo_put(id: int):
-    return {"message": f"Todo PUT {id}"}
 
-@app.delete("/api/todo/{id}")
-async def todo_delete(id: int):
-    return {"message": f"Todo DELETE {id}"}
+@app.put("/api/todo/{title}")
+async def todo_put(title):
+    return {"message": f"Todo PUT {title}"}
+
+
+@app.delete("/api/todo/{title}")
+async def todo_delete(title):
+    return {"message": f"Todo DELETE {title}"}

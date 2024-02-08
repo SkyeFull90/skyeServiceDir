@@ -25,7 +25,7 @@ async def fetch_all_todos():
 async def create_todo(todo):
     document = todo
     result: object = await collection.insert_one(document)
-    return result
+    return document
 
 
 async def update_todo(title, desc):
@@ -34,3 +34,8 @@ async def update_todo(title, desc):
     }})
     document: object = await collection.find_one({"title": title})
     return document
+
+
+async def delete_todo(title):
+    await collection.delete_one({"title": title})
+    return True
