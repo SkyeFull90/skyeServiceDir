@@ -1,0 +1,109 @@
+// client
+
+// Create a new Astro component `Event.astro` to display individual events
+---
+// Define the props
+const { title, city, description, image } = Astro.props;
+---
+<article>
+  <img src={image} alt={title} />
+  <h2>{title}</h2>
+  <p>{city}</p>
+  <p>{description}</p>
+</article>
+
+// Create a new Astro component `Events.astro` to display a list of events
+---
+// Import the data and the Event component
+import data from './data.json';
+import Event from './Event.astro';
+---
+
+<section>
+  {data.allEvents.map(event => (
+    <Event 
+      title={event.title} 
+      city={event.city} 
+      description={event.description} 
+      image={event.image} 
+    />
+  ))}
+</section>
+
+// 2nd version of the top bit
+
+---
+// Import the data and the Event component
+import data from './data.json';
+import Event from './Event.astro';
+
+// Define how many events per page
+const perPage = 5;
+
+// Calculate the total number of pages
+const totalPages = Math.ceil(data.allEvents.length / perPage);
+
+// Get the current page from the URL, or default to 1
+const currentPage = Astro.request.params.page ? parseInt(Astro.request.params.page) : 1;
+
+// Get the events for the current page
+const events = data.allEvents.slice((currentPage - 1) * perPage, currentPage * perPage);
+---
+<section>
+  {events.map(event => (
+    <Event 
+      title={event.title} 
+      city={event.city} 
+      description={event.description} 
+      image={event.image} 
+    />
+  ))}
+</section>
+<nav>
+  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+    <a href={`/events/${page}`}>{page}</a>
+  ))}
+</nav>
+
+// second page
+
+---
+// Import the fetch function
+import fetch from 'node-fetch';
+
+// Define the API URL
+const API_URL = 'http://localhost:8000/api/events'; // Replace with your actual API URL
+
+// Fetch the data from the API
+const response = await fetch(API_URL);
+const data = await response.json();
+---
+<section>
+  {data.map(event => (
+    <article>
+      <h2>{event.title}</h2>
+      <p>{event.city}</p>
+      <p>{event.description}</p>
+      <img src={event.image} alt={event.title} />
+    </article>
+  ))}
+</section>
+
+// server
+
+# Import FastAPI and json
+from fastapi import FastAPI
+from typing import Optional
+import json
+
+# Initialize the application
+app = FastAPI()
+
+# Load your data from a JSON file
+with open('data.json') as f:
+    events = json.load(f)
+
+# Define a route for the API
+@app.get("/api/events")
+def read_events(skip: Optional[int] = 0, limit: Optional[int] = 10):
+    return events['allEvents'][skip : skip + limit]
