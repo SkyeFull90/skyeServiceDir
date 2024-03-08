@@ -6,7 +6,7 @@ The resources used for this project are as Follows
 
 Cypress: <https://docs.cypress.io/guides/overview/why-cypress>
 
-NextJS: <https://nextjs.org/docs>
+Next.js: <https://nextjs.org/docs>
 
 Docker <https://docs.docker.com/>
 
