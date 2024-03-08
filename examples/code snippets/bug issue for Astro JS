@@ -1,0 +1,22 @@
+astro js bug issue
+
+create astro or create astro@latest inside a containing directory for a stack like project breaks after a dependecy install and running the dev script. It refuses to boot up the localhost client to see the dev server in your browser. But when ran as a plain single project, it runs just fine. Here si some bash output:
+
+from a directory:
+
+> better-bar@0.0.1 dev
+> astro dev
+
+sh: 1: astro: not found
+
+from a single outside project:
+
+$ astro dev
+
+ astro  v4.4.15 ready in 317 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+11:37:09 watching for file changes...
+
