@@ -18,6 +18,14 @@ export default function RootLayout({ children }) {
           <p>{metadata.description}</p>
         </header>
         {children}
+        <footer>
+          <p>
+            Created by{" "}
+            <a href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app">
+              Vercel
+            </a>
+          </p>
+        </footer>
       </body>
     </html>
   );
