@@ -7,6 +7,7 @@ fetch('./data.json')
             eventElement.className = 'event';
             eventElement.innerHTML = `
                 <h2>${event.id}</h2>
+                <img src="${event.image}" alt="${event.name}">
                 <p>${event.description}</p>
                 <p><span class="bold">City:</span> ${event.city}</p>
             `;
