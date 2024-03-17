@@ -1,0 +1,19 @@
+
+---
+import data from '../data.json';
+import Event from './Event.astro';
+// for the category in each category
+let { category } = Astro.props;
+let filteredEvents = data.allEvents.filter(event => event.category === category);
+---
+
+<section>
+  {filteredEvents.map(event => (
+    <Event 
+      title={event.title} 
+      city={event.city} 
+      description={event.description} 
+      image={event.image} 
+    />
+  ))}
+</section>
