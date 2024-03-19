@@ -77,20 +77,20 @@ ul {
     min-height: 550px;
   }
 
-  img {
-    width: 20%;
-  }
-
   .home_body {
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
   
-  .home_body .image {
+  .home_body {
     width: 40%;
   }
   
+  .logo{
+    width: 5%;
+  }
+
   .home_body .card {
     display: flex;
     flex-direction: row;

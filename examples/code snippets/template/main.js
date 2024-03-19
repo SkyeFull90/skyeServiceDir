@@ -4,18 +4,12 @@ fetch('./data.json')
         const eventsContainer = document.getElementById('events');
         data.allEvents.forEach(event => {
             const eventElement = document.createElement('div');
-            eventElement.className = 'home_body';
+            eventElement.className = 'card';
             eventElement.innerHTML = `
-                <section className="card">
-                    <div className="image">
-                        <img width={600} height={400} src="${event.image}" alt="${event.name}">
-                    </div>
-                    <div className="content">
-                        <h2>${event.id}</h2>
-                        <p>${event.description}</p>
-                        <p><span className="bold">City:</span> ${event.city}</p>
-                    </div>
-                </section>
+             <img width={600} height={400} src="${event.image}" alt="${event.name}">
+             <h2>${event.id}</h2>
+             <p>${event.description}</p>
+             <p><span className="bold">City:</span> ${event.city}</p>
             `;
             eventsContainer.appendChild(eventElement);
         });
