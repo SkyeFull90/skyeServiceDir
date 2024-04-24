@@ -30,3 +30,10 @@ async def create_todo(todo):
     document = todo
     result = await collection.insert_one(document)
     return result
+
+# Update a todo
+async def update_todo(title, description):
+    await collection.update_one({"title": title}, {"$set": {"description": description}})
+    document = await collection.find_one({"title": title})
+    return document
+    
