@@ -1,7 +1,12 @@
 from fastapi import FastAPI
-
+# from fastapi.middleware.cors import CORSMiddleware
+# from fastapi import FastAPI, HTTPException
 app = FastAPI()
-
+"""
+origins = [
+    "http://localhost:5421",
+    
+"""
 
 @app.get("/")
 def read_root():
@@ -11,22 +16,22 @@ def read_root():
 def read_api():
     return {"Hello": "API"}
 
-@app.get("/api/items/")
+@app.get("/api/todos/")
 def get_items():
-    return {"items": ["item1", "item2"]}
+    return {"todos": ["todo1", "todo2"]}
 
 @app.get("/api/items/{id}")
 def get_item(id):
-    return {"item": "item1"}
+    return {"todos": "todo1"}
 
-@app.post("/api/create_items/")
+@app.post("/api/create-todo/")
 def create_item():
-    return {"item": "created"}
+    return {"todo": "created"}
 
-@app.put("/api/items/{id}")
+@app.put("/api/todos/{id}")
 def update_item(id):
-    return {"item": id}
+    return {"todo": id}
 
-@app.delete("/api/delete-items/{id}")
+@app.delete("/api/delete-todo/{id}")
 def delete_item():
-    return {"item deleted": "item1"}
+    return {"todo deleted": "todo"}
