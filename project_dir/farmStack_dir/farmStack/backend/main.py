@@ -4,7 +4,7 @@ from fastapi import FastAPI
 app = FastAPI()
 """
 origins = [
-    "http://localhost:5421",
+    "http://localhost:5173",
     
 """
 
