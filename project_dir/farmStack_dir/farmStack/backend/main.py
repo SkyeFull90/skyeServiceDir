@@ -42,9 +42,13 @@ def get_item(title):
         return response
     raise HTTPException(404, f"There is no todo with the title {title}")
 
+
 @app.post("/api/create-todo/", response_model=Todo)
-def create_item():
-    return {"todo": "created"}
+def create_item(todo: Todo):
+    response = create_todo(todo)
+    if response:
+        return response
+    raise HTTPException(404, f"There is no todo with the title {todo.title}")
 
 
 @app.put("/api/todos/{id}")
