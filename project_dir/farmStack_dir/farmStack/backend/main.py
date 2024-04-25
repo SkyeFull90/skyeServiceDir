@@ -1,6 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 # from fastapi.middleware.cors import CORSMiddleware
-# from fastapi import FastAPI, HTTPException
+from backend.model import Todo
+from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, remove_todo
+
 app = FastAPI()
 """
 origins = [
@@ -16,29 +18,39 @@ app.add_middleware(
     
 """
 
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
 
 @app.get("/api/")
 def read_api():
     return {"Hello": "API"}
 
+
 @app.get("/api/todos/")
-def get_items():
-    return {"todos": ["todo1", "todo2"]}
+async def get_items():
+    response = await fetch_all_todos()
+    return response
 
-@app.get("/api/items/{id}")
-def get_item(id):
-    return {"todos": "todo1"}
 
-@app.post("/api/create-todo/")
+@app.get("/api/items/{title}", response_model=Todo)
+def get_item(title):
+    response = fetch_one_todo(title)
+    if response:
+        return response
+    raise HTTPException(404, f"There is no todo with the title {title}")
+
+@app.post("/api/create-todo/", response_model=Todo)
 def create_item():
     return {"todo": "created"}
+
 
 @app.put("/api/todos/{id}")
 def update_item(id):
     return {"todo": id}
+
 
 @app.delete("/api/delete-todo/{id}")
 def delete_item():
