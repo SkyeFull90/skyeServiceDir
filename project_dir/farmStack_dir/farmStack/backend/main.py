@@ -20,12 +20,12 @@ app.add_middleware(
 
 
 @app.get("/")
-def read_root():
+async def read_root():
     return {"Hello": "World"}
 
 
 @app.get("/api/")
-def read_api():
+async def read_api():
     return {"Hello": "API"}
 
 
@@ -35,27 +35,33 @@ async def get_items():
     return response
 
 
-@app.get("/api/items/{title}", response_model=Todo)
-def get_item(title: str):
-    response = fetch_one_todo(title)
+@app.get("/api/todos/{title}", response_model=Todo)
+async def get_todo_by_id(title):
+    response = await fetch_one_todo(title)
     if response:
         return response
     raise HTTPException(404, f"There is no todo with the title {title}")
 
 
 @app.post("/api/create-todo/", response_model=Todo)
-def create_item(todo: Todo):
-    response = create_todo(todo)
+async def create_item(todo: Todo):
+    response = await create_todo(todo.dict())
     if response:
         return response
     raise HTTPException(404, f"There is no todo with the title {todo.title}")
 
 
-@app.put("/api/todos/{id}")
-def update_item(id):
-    return {"todo": id}
+@app.put("/api/todos/{title}/", response_model=Todo)
+async def update_item(title: str, description: str):
+    response = await update_todo(title, description)
+    if response:
+        return response
+    raise HTTPException(404, f"There is no todo with the title {title}")
 
 
 @app.delete("/api/delete-todo/{id}")
-def delete_item():
-    return {"todo deleted": "todo"}
+async def delete_item(title):
+    response = await remove_todo(title)
+    if response:
+        return "Successfully deleted todo"
+    raise HTTPException(404, f"There is no todo with the title {title}")
