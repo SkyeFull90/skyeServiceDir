@@ -36,7 +36,7 @@ async def get_items():
 
 
 @app.get("/api/items/{title}", response_model=Todo)
-def get_item(title):
+def get_item(title: str):
     response = fetch_one_todo(title)
     if response:
         return response
