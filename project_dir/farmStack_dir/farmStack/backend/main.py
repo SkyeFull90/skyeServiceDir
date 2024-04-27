@@ -6,7 +6,8 @@ from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, 
 app = FastAPI()
 """
 origins = [
-    "http://localhost:5173",
+    "http://localhost:5173s",
+    "http://localhost:3000",
     
 app.add_middleware(
     CORSMiddleware,
