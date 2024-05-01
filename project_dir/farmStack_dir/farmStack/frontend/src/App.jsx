@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,27 +6,11 @@ function App() {
 
   return (
     <>
+     
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div className='farm-stack'>
         <section>
-           <h1>Farm Stack</h1>
-           <h2>Hello World!</h2>
+           <h1 className='m-6'>Farm Stack</h1>
+           <h2 className='mb-6'>Hello World!</h2>
         </section>
         <div className="overflow-x-auto">
           <table className="table">
