@@ -12,6 +12,13 @@ function App() {
            <h1 className='m-6'>Farm Stack</h1>
            <h2 className='mb-6'>Hello World!</h2>
         </section>
+        <div className='m-10'>
+          <form action="#" method="post">
+            <input type="text" placeholder='title'/>
+            <input type="text" placeholder='description'/>
+            <button value="Submit" className='btn'>Add task</button>
+          </form>
+        </div>
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
