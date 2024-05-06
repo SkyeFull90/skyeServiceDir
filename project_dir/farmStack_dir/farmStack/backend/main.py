@@ -1,14 +1,21 @@
 from fastapi import FastAPI, HTTPException
-# from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 from model import Todo
 from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, remove_todo
 
 app = FastAPI()
+
 """
+
+
+"""
+
 origins = [
     "http://localhost:5173s",
     "http://localhost:3000",
-    
+]
+
+ 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -17,7 +24,6 @@ app.add_middleware(
     allow_headers=["*"],
 )    
     
-"""
 
 
 @app.get("/")
