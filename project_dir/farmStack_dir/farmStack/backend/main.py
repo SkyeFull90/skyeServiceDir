@@ -6,12 +6,11 @@ from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, 
 app = FastAPI()
 
 """
-
-
+app.mount("")
 """
 
 origins = [
-    "http://localhost:5173s",
+    "http://localhost:5173",
     "http://localhost:3000",
 ]
 
@@ -36,13 +35,13 @@ async def read_api():
     return {"Hello": "API"}
 
 
-@app.get("/api/todos/")
+@app.get("/api/todo/")
 async def get_items():
     response = await fetch_all_todos()
     return response
 
 
-@app.get("/api/todos/{title}", response_model=Todo)
+@app.get("/api/todo/{title}", response_model=Todo)
 async def get_todo_by_id(title):
     response = await fetch_one_todo(title)
     if response:
@@ -50,7 +49,7 @@ async def get_todo_by_id(title):
     raise HTTPException(404, f"There is no todo with the title {title}")
 
 
-@app.post("/api/create-todo/", response_model=Todo)
+@app.post("/api/todo/", response_model=Todo)
 async def create_item(todo: Todo):
     response = await create_todo(todo.dict())
     if response:
@@ -58,7 +57,7 @@ async def create_item(todo: Todo):
     raise HTTPException(404, f"There is no todo with the title {todo.title}")
 
 
-@app.put("/api/todos/{title}/", response_model=Todo)
+@app.put("/api/todo/{title}/", response_model=Todo)
 async def update_item(title: str, description: str):
     response = await update_todo(title, description)
     if response:
@@ -66,7 +65,7 @@ async def update_item(title: str, description: str):
     raise HTTPException(404, f"There is no todo with the title {title}")
 
 
-@app.delete("/api/delete-todo/{id}")
+@app.delete("/api/todo/{title}")
 async def delete_item(title):
     response = await remove_todo(title)
     if response:
