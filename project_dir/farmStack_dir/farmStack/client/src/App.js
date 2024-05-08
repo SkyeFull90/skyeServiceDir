@@ -1,6 +1,3 @@
-// @bekbrace
-// FARMSTACK Tutorial - Sunday 13.06.2021
- 
 import React, { useState, useEffect} from 'react';
 import './App.css';
 import TodoView from './components/TodoListView';
@@ -12,9 +9,7 @@ function App() {
 
   const [todoList, setTodoList] = useState([{}])
   const [title, setTitle] = useState('') 
-  const [desc, setDesc] = useState('')
-  
-    
+  const [desc, setDesc] = useState('')      
 
   // Read all todos
   useEffect(() => {

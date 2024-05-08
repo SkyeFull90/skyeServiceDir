@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todoList, setTodoList] = useState([{}])
+  const [title, setTitle] = useState('')
+  const [desc, setDesc] = useState('')
+
+
+
 
   return (
     <>
@@ -12,9 +17,9 @@ function App() {
            <h1 className='m-6'>Farm Stack</h1>
            <h2 className='mb-6'>Hello World!</h2>
         </section>
-        <div className='m-10'>
-            <input type="text" placeholder='title'/>
-            <input type="text" placeholder='description'/>
+        <div className='m-10 card-actions'>
+            <input type="text" placeholder='title'className='input input-borderd w-full max-w-xs'/>
+            <input type="text" placeholder='description' className='input input-bordered w-full max-w-xs'/>
             <button value="Submit" className='btn'>Add task</button>
         </div>
         <div className="overflow-x-auto">
@@ -29,7 +34,7 @@ function App() {
             </thead>
             <tbody>
               <tr>
-                <th>Title</th>
+                <td>Title</td>
                 <td>Description</td>
                 <td><button type="submit" className='btn btn-warning'>Edit</button></td>
                 <td><button type="submit" className='btn btn-error'>Delete</button></td>
