@@ -1,13 +1,17 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from model import Todo
 from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, remove_todo
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 """
-app.mount("")
+app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 """
+app.mount("/static", StaticFiles(directory="build/static"), name="static")
 
 origins = [
     "http://localhost:5173",
@@ -27,7 +31,10 @@ app.add_middleware(
 
 @app.get("/")
 async def read_root():
-    return {"Hello": "World"}
+    index_path = Path(__file__).parent / "build" / "index.html"
+    if not index_path.exists():
+        raise HTTPException(status_code=404)
+    return FileResponse(str(index_path))
 
 
 @app.get("/api/")
