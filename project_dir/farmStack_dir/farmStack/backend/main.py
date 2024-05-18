@@ -11,7 +11,6 @@ app = FastAPI()
 """
 app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 """
-app.mount("/static", StaticFiles(directory="build/static"), name="static")
 
 origins = [
     "http://localhost:5173",
@@ -31,10 +30,7 @@ app.add_middleware(
 
 @app.get("/")
 async def read_root():
-    index_path = Path(__file__).parent / "build" / "index.html"
-    if not index_path.exists():
-        raise HTTPException(status_code=404)
-    return FileResponse(str(index_path))
+    return {"Hello": "World"}
 
 
 @app.get("/api/")
