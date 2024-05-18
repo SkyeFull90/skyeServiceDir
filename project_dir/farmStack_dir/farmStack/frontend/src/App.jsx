@@ -26,9 +26,8 @@ function App() {
           <table className="table">
             <thead>
               <tr>
-                <th>Item</th>
+                <th>Title</th>
                 <th>Description</th>
-                <th>Edit Todo</th>
                 <th>Delete Todo</th>
               </tr>
             </thead>
@@ -36,8 +35,7 @@ function App() {
               <tr>
                 <td>Title</td>
                 <td>Description</td>
-                <td><button type="submit" className='btn btn-warning'>Edit</button></td>
-                <td><button type="submit" className='btn btn-error'>Delete</button></td>
+                <td><button type="submit" className='btn btn-outline btn-error'>X</button></td>
               </tr>
             </tbody>
           </table>
