@@ -7,3 +7,9 @@ Malicious code written to interfere with computer opertions and cause damage to 
 ## Malware
 
 Software designed to harm devices or networks
+
+## Network Security
+
+### Network Tools
+
+Hub: A network device that broadcasts information to every device on the network
