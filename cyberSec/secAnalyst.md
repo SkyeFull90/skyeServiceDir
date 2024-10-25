@@ -13,3 +13,11 @@ Software designed to harm devices or networks
 ### Network Tools
 
 Hub: A network device that broadcasts information to every device on the network
+
+Switch: A device that makes connections connections between specific devices on a network by sending and recieving data between them
+
+Router: A network device that connects multiple networks together
+
+Modem: A device that connects your router to the internet and bring access to the LAN
+
+Virtualization tools: Pieces of software that performs network operations
