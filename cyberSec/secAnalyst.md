@@ -26,7 +26,7 @@ Virtualization tools: Pieces of software that performs network operations
 
 Cloud computing: The practice of using of using remote servers, app;ications, and network services that are on the the inernet instead of local phsical devices.
 
-## More Netowrk Security
+## The TCP/IP protocol
 
 ### Data packet
 
@@ -47,3 +47,9 @@ A set of standards used for routing and addressing data as they travel between d
 ### Port
 
 A software-based location that organizes the sending and recieving of data between devices on a network
+
+### Port Number
+
+Port 25 - Email
+Port 443 - Secure inernet communication
+Port 20 - Large file tranfers
