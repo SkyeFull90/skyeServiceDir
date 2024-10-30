@@ -28,4 +28,22 @@ Cloud computing: The practice of using of using remote servers, app;ications, an
 
 ## More Netowrk Security
 
-Data packet: A basic unit of information that travels from one device to another within network.
+### Data packet
+
+A basic unit of information that travels from one device to another within network.
+
+### Bandwith
+
+ The amount of data a device recieves every second.
+
+### Transmission Control Protocol (TCP)
+
+ An internet communication protocol that allows two devices to form a connection and stream data
+
+### Internet Protocol
+
+A set of standards used for routing and addressing data as they travel between devices on a network
+
+### Port
+
+A software-based location that organizes the sending and recieving of data between devices on a network
