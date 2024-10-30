@@ -21,3 +21,11 @@ Router: A network device that connects multiple networks together
 Modem: A device that connects your router to the internet and bring access to the LAN
 
 Virtualization tools: Pieces of software that performs network operations
+
+## Cloud Networks
+
+Cloud computing: The practice of using of using remote servers, app;ications, and network services that are on the the inernet instead of local phsical devices.
+
+## More Netowrk Security
+
+Data packet: A basic unit of information that travels from one device to another within network.
